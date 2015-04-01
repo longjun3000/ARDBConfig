@@ -13,24 +13,15 @@ Such as: user A's database version is v1, user B is v2, user C never installed A
 How to use ?
 ============
 1. create a project for the first time, the situation of the new database (database version 1) :
-
 (1) to create a new inheritance in "RLDBConfigBase" classes, such as "DBConfigLogic".
-
 (2) to add an int type read-only property "dbVersion", realizing the get method and return 1;
-
 (3) added to cover the superclass method "onCreate", and write down around a method a SQL and create the data table structure of the code.
-
 (4) the application starts (e.g., "AppDelegate. M"), instantiate "DBConfigLogic" class and call "checkDatabase" method, can complete the initialization of the database.
 
-
 2. the App in a version of the database structure needs to be altered (database version to 2) :
-
 (1) in step 1, on the basis of modified dbVersion properties method in the return value is the return of 2.
-
 (2) in step 1, on the basis of "onUpgrade" add cover the superclass method, using demonstration in the article "onUpgrade" code, only need to modify the code within the switch.
-
 (3) if the database structure upgrade after the completion of the need to do some follow-up data processing, can be added to cover the superclass method "didChecked", code written to the database operation.
-
 (4) the application starts (e.g., "AppDelegate. M"), instantiate "DBConfigLogic" class and call "checkDatabase" method, can complete the initialization of the database and update action.
 
 

@@ -2,7 +2,7 @@ ARDBConfig
 ===========
 Provide a database table structure update mechanism, ensure that the user in any version of the installer, the database structure to ensure adapter.
 
-Such as: user A database version is v1, user B is v2, user C never installed App; Now, all users to install and run the latest App (database version is v3) after the user A database will "v1 - - > > v2 v3" order upgrades, user database will B "v2 - > v3" in order to upgrade, the user database of C will "v1 - - > > v2 v3" order to upgrade.
+Such as: user A's database version is v1, user B is v2, user C never installed App; Now, all users to install and run the latest App (database version is v3) after the user A's database will "v1 --> v2 --> v3" order upgrades, user B 's database will "v2 --> v3" in order to upgrade, the user C's database will "v1 --> v2 --> v3" order to upgrade.
 
 
 提供一个数据库表结构更新的机制，保证用户无论从哪个版本安装程序，数据库结构保证适配。
@@ -47,7 +47,6 @@ How to use ?
 （2）在步骤1的基础上，添加覆盖父类方法“onUpgrade”，使用本文“onUpgrade”内示范代码，只需修改switch内的代码。
 （3）如果在数据库结构升级完成后需要做一些后续数据处理，可以添加覆盖父类的方法“didChecked”，写入数据库操作的代码。
 （4）在程序启动时（如“AppDelegate.m”），实例化“DBConfigLogic”类并调用“checkDatabase”方法，即可完成数据库的初始化和升级动作。
-
 
 
 Contact

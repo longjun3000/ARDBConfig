@@ -1,11 +1,11 @@
 ARDBConfig
 ===========
-Provide a database table structure update mechanism, ensure that the user in any version of the installer, the database structure to ensure adapter.
+On the iOS, provide a database table structure update mechanism, ensure that the user in any version of the installer, the database structure to ensure adapter.
 
 Such as: user A's database version is v1, user B is v2, user C never installed App; Now, all users to install and run the latest App (database version is v3) after the user A's database will "v1 --> v2 --> v3" order upgrades, user B 's database will "v2 --> v3" in order to upgrade, the user C's database will "v1 --> v2 --> v3" order to upgrade.
 
 
-提供一个数据库表结构更新的机制，保证用户无论从哪个版本安装程序，数据库结构保证适配。
+在iOS上，提供一个数据库表结构更新的机制，保证用户无论从哪个版本安装程序，数据库结构保证适配。
 
 如:用户A的数据库版本是v1，用户B是v2，用户C没装过App；现在，所有用户安装并运行最新App（数据库版本是v3）后，用户A的数据库将会“v1->v2->v3”顺序升级，用户B的数据库将会“v2->v3”顺序升级，用户C的数据库将会“v1->v2->v3”顺序升级。
 

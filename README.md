@@ -9,7 +9,7 @@ Such as: user A's database version is v1, user B is v2, user C never installed A
 
 如:用户A的数据库版本是v1，用户B是v2，用户C没装过App；现在，所有用户安装并运行最新App（数据库版本是v3）后，用户A的数据库将会“v1->v2->v3”顺序升级，用户B的数据库将会“v2->v3”顺序升级，用户C的数据库将会“v1->v2->v3”顺序升级。
 
-![image](https://raw2.github.com/longjun3000/ARDBConfig/master/Screenshot01.png)
+![image](https://github.com/longjun3000/ARDBConfig/blob/master/Screenshop01.png)
 
 How to use ?
 ============
